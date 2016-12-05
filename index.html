@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Card Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="static/javascript/main.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="game_wrapper game_off">
+      <div class="pre_game">
+        <p id="info"></p>
+        <input id="new_player_name" type="text" name="name" placeholder="Name" value="">
+        <button id="add_player" type="button" name="button">Add New Player</button>
+      </div>
+      <button id="start_game" type="button" name="button">Start Game</button>
+      <button id="new_game" type="button" name="button">New Game</button>
+
+      <div class="game_table">
+        <div id="deck" class="deck">
+          <div class="deal_card card">
+          </div>
+        </div>
+
+        <div id="dealer_section">
+
+
+          <div class="dealer">
+            <h4><strong>~Dealer~</strong></h4>
+            <div id="hand_0" class="hand">
+
+            </div>
+            <h5 id="dealer_sum"></h5>
+            <div class="actions">
+              <button id="deal" type="button" name="button">Deal</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="table_section">
+        </div>
+
+        <div id="player_section">
+        </div>
+
+      </div><!--End of game_table  -->
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,220 @@
+body{
+}
+h1, h2, h3, h4, h5, h6{
+  margin-bottom: 5px;
+  color: white;
+  font-family: sans-serif;
+}
+p{
+  font-size: 16px;
+  font-family: sans-serif;
+}
+button{
+  background-color: white;
+}
+.pre_game{
+  display: inline-block;
+  margin-right: 20px;
+}
+.game_table{
+  position: relative;
+  width: 100%;
+  padding: 50px;
+  min-height: 620px;
+  min-width: 400px;
+  background-image: url('../images/felt2.jpg');
+  background-size: cover;
+}
+.deck{
+  position: absolute;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 80px;
+}
+#dealer_section{
+  width: 60%;
+  height: 265px;
+  padding-left: 20%;
+  .dealer{
+    vertical-align: top;
+    margin-right: 80px;
+  }
+
+}
+#table_section{
+  height: 60px;
+}
+#player_section{
+  .player{
+    display: inline-block;
+    vertical-align: top;
+    height: 320px;
+    width: 260px;
+    margin-right: 40px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5%;
+    .actions{
+      margin-top: 20px;
+      padding-top: 10px;
+      border-top: 1px solid black;
+      button{
+        margin: 0 10px;
+      }
+    }
+    .won{
+      margin-top: 20px;
+      color: gold;
+    }
+    .lost{
+      margin-top: 20px;
+      color: red;
+    }
+  }
+}
+.hand{
+  text-align: left;
+  height: 150px;
+  padding: 10px;
+}
+.card{
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  height: 150px;
+  width: 100px;
+  margin: 2px;
+  //padding: 4px;
+  border: 2px solid black;
+  border-radius: 5%;
+  background: white;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+.deal_card{
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background-image: url('../images/card_back.jpg');
+}
+
+.player_card{
+  text-align: left;
+  margin-right: -90px;
+  transform: rotateY(180deg);
+  transition: transform .4s;
+  img{
+    position: absolute;;
+  }
+  .rank{
+    margin-left: 2px;
+  }
+  p{
+    margin-bottom: 2px;
+  }
+  .lower_symbol{
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    transform: rotate(180deg);
+  }
+}
+
+.back{
+  img{
+    display: block;
+  }
+  .lower_symbol{
+    display: none;
+  }
+}
+.front{
+  img{
+    display: none;
+  }
+  .lower_symbol{
+    display: block;
+  }
+}
+
+.game_off{
+  #new_game{
+    display: none;
+  }
+  .dealer{
+    display: none;
+  }
+}
+
+.game_on{
+  .pre_game{
+    display: none;
+  }
+  #start_game{
+    display: none;
+  }
+}
+
+#action_card{
+  z-index: 1000;
+  transform: rotate(180deg);
+  transition: transform .5s, left .5s, top .5s;
+}
+
+.waiting{
+  .actions{
+    display: none;
+  }
+  .won{
+    display: none;
+  }
+  .lost{
+    display: none;
+  }
+}
+
+.playing{
+  box-shadow: 0 0 10px green;
+  .actions{
+    display: block;
+  }
+  .won{
+    display: none;
+  }
+  .lost{
+    display: none;
+  }
+}
+
+.bust{
+  box-shadow: 0 0 10px red;
+  .actions{
+    display: none;
+  }
+  .won{
+    display: none;
+  }
+  .lost{
+    display: block;
+  }
+}
+
+.winner{
+  box-shadow: 0 0 10px gold;
+  .actions{
+    display: none;
+  }
+  .won{
+    display: block;
+  }
+  .lost{
+    display: none;
+  }
+}
+.black{
+  color: black;
+}
+.red{
+  color: red;
+}
