@@ -97,13 +97,14 @@ $(document).ready(function() {
       //Deal a single card to player
       this.deal = function(player){
         $('#deck').append('<div id="action_card" class="deal_card card"></div>');
+        //Calculate where to send card based on location of player's hand and number of cards in hand
         var top = ($(`#hand_${player.position}`).offset().top - 96);
-        var left = ($(`#hand_${player.position}`).offset().left - 48 + (20 * player.hand.length));
+        var left = ($(`#hand_${player.position}`).offset().left - 47 + (20 * player.hand.length));
         var newCard = {};
         $('#action_card').css({
           'top' : `${top}px`,
           'left' : `${left}px`,
-          'transform' : 'rotate(0deg)',
+          'transform' : 'rotate(180deg)',
         });
         setTimeout(function(){
           $('#action_card').remove();
@@ -343,7 +344,7 @@ $(document).ready(function() {
       })
       game.takeTurn(players[players.length-1]);
       //Calculate wait time before flipping cards based on number of players
-    }, (((players.length * 2) + .1) * 1000))
+    }, (((players.length * 2) + .5) * 1000))
   });
 
   //Reset for a new game
