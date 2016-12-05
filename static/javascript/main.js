@@ -99,7 +99,7 @@ $(document).ready(function() {
         $('#deck').append('<div id="action_card" class="deal_card card"></div>');
         //Calculate where to send card based on location of player's hand and number of cards in hand
         var top = ($(`#hand_${player.position}`).offset().top - 96);
-        var left = ($(`#hand_${player.position}`).offset().left - 47 + (20 * player.hand.length));
+        var left = ($(`#hand_${player.position}`).offset().left - 48 + (20 * player.hand.length));
         var newCard = {};
         $('#action_card').css({
           'top' : `${top}px`,
